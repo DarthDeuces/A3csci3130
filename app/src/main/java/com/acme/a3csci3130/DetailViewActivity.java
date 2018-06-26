@@ -44,7 +44,7 @@ public class DetailViewActivity extends Activity {
 
         Map<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("/contacts/" + key, contactValues);
-        childUpdates.put("/user-contacts/" + receivedPersonInfo.uid + "/" + key, contactValues);
+        childUpdates.put("/name-contacts/" + receivedPersonInfo.uid + "/" + key, contactValues);
 
         appState.firebaseReference.updateChildren(childUpdates);
     }
